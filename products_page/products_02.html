@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tw-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桂季LOGO設計</title>
+    <link rel="stylesheet" href="/css/products.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">MILY HSIEH</a></div>
+
+        <div class="burger-menu">
+            <a href="javascript:void(0)">
+                <div class="menu"></div>
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="../resume.html">RESUME</a></li>
+            <li><a href="../index.html">PORTFOLIO</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <article><h1>桂季</h1>LOGO設計</article>
+        
+        <ul class="pic">
+            <li><img src="../images/brand/guiji-01.png" alt=""></li>
+            <li><img src="../images/brand/guiji-02.png" alt=""></li>
+            <li><img src="../images/brand/guiji-03.png" alt=""></li>
+            <li><img src="../images/brand/guiji-04.png" alt=""></li>
+            <li><img src="../images/brand/guiji-05.png" alt=""></li>
+        </ul>
+    </main>
+
+    <footer>© 2020 Hsieh Shih Ting</footer>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        "use strict"
+
+        $(".burger-menu").click(function () {
+            $(this).toggleClass("menu-on");
+            $('header>ul').slideToggle();
+        });
+
+    </script>
+
+</body>
+
+</html>
