@@ -190,9 +190,12 @@ main article{
     line-height: 25px;
     margin-bottom: 30px;
 }
-
 main article h1{
     font-weight: 600;
+}
+main article a{
+    color: #0055b0;
+    font-size: 13px;
 }
 .pic img{
     width: 100%;
