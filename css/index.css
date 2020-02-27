@@ -43,15 +43,26 @@ table {
 }
 /* ----------------reset css end---------------- */
 *{
-    font-family: 'Source Sans Pro','Noto Sans TC';
     text-decoration: none;
+}
+body{
+    font-family: 'Helvetica','Noto Sans TC';
+    background-color: #F9F9F9;
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    /* background-color: rgb(244, 244, 244); */
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.4s ease-in-out;
+    z-index: 500;
+}
+.hideClose header {
+    top: -65px;
 }
 .logo{
     margin-left: 100px;
@@ -127,13 +138,17 @@ header{
     position: relative;
     margin-right: 100px;
     width: 100%;
-    max-width: 200px;
-    font-size: 14px;
-    font-weight: 600;
+    max-width: 180px;
+    font-size: 13.5px;
 }
+.link_no_color a{
+    color: #a8a8a8;
+    font-weight: 500;
+}
+.logo a:hover,
 .nav a:hover{
     color: #727272;
-    border-bottom: 1px solid #d0d0d0;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -177,6 +192,7 @@ header{
     .nav a{
         font-size: 25px;
         color: #fff;
+        font-weight: 900;
     }
 }
 /* ----------------header end---------------- */
@@ -190,6 +206,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 65px;
     padding-top: 50px;
     padding-bottom: 100px;
 }
@@ -219,9 +236,13 @@ header{
     line-height: 25px;
     opacity: 0;
     text-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.7);
+    letter-spacing: 0.75px;
+}
+.info h2{
+    font-weight: 500;
 }
 .info p{
-    font-size: 14px;
+    font-size: 13px;
     color: rgb(235, 235, 235);
 }
 
@@ -236,7 +257,7 @@ header{
     }
     #portfolio{
         padding-top: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
     .works{
         width: calc(50% - 20px);
@@ -245,18 +266,21 @@ header{
 }
 /* ----------------portfolio end---------------- */
 
+
+/* ----------------footer---------------- */
 footer{
     position: fixed;
     bottom: 15px;
-    right: 25px;
+    left: 25px;
     font-size: 12px;
-    font-weight: 600;
 }
 @media screen and (max-width: 768px) {
     footer{
         position: static;
-        line-height: 30px;
-        background-color: rgb(238, 238, 238);
+        line-height: 50px;
+        /* background-color: rgb(238, 238, 238); */
         text-align: center;
+        font-weight: 500;
+        color: #3a3a3a;
     }
 }

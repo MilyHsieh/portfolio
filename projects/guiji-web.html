@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tw-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桂季 網站製作 | MILY HSIEH</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet"></head>
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">MILY HSIEH</a></div>
+
+        <div class="burger-menu">
+            <a href="javascript:void(0)">
+                <div class="menu"></div>
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="../resume.html">RESUME</a></li>
+            <li><a href="../index.html">PORTFOLIO</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <article>
+            <h1>桂季網站製作</h1>
+            <p>主視覺設計與網頁切版</p>
+            <a href="https://milyhsieh.github.io/Gui-ji/" target="_blank" rel="noopener noreferrer">https://milyhsieh.github.io/Gui-ji/</a>
+        </article>
+        
+        <ul class="pic">
+            <li><img src="../images/web/guiji-web-01.png" alt=""></li>
+            <li><img src="../images/web/guiji-web-02.png" alt=""></li>
+        </ul>
+        <a href="../index.html" class="back_btn">回上頁</a>
+    </main>
+
+    <footer>© 2020 Hsieh Shih Ting</footer>
+
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        "use strict"
+        
+        //卷軸上滑出現header區
+        $(document).ready(function () {
+            $.extend({
+                'goAnchor': function (to, time) {
+                    $obj = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                    $($obj).animate({
+                        scrollTop: to
+                    }, time);
+                }
+            });
+        });
+        let bodyClass = document.body.classList,
+            lastScrollY = 0;
+        window.addEventListener('scroll', function () {
+            let st = this.scrollY;
+            if (st < lastScrollY) {
+                bodyClass.remove('hideClose');
+            } else {
+                bodyClass.add('hideClose');
+            }
+            lastScrollY = st;
+        });
+
+        //漢堡選單
+        $(".burger-menu").click(function () {
+            $(this).toggleClass("menu-on");
+            $('header>ul').slideToggle();
+        });
+
+    </script>
+
+</body>
+
+</html>

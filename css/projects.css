@@ -43,15 +43,29 @@ table {
 }
 /* ----------------reset css end---------------- */
 *{
-    font-family: 'Source Sans Pro','Noto Sans TC';
     text-decoration: none;
+}
+body{
+    font-family: 'Helvetica','Noto Sans TC';
+    background-color: #F9F9F9;
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    /* background-color: rgb(244, 244, 244); */
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.4s ease-in-out;
+    z-index: 500;
+}
+.hideClose header {
+    top: -65px;
+}
+.hideClose header {
+    top: -85px;
 }
 .logo{
     margin-left: 100px;
@@ -127,13 +141,14 @@ header{
     position: relative;
     margin-right: 100px;
     width: 100%;
-    max-width: 200px;
-    font-size: 14px;
+    max-width: 180px;
+    font-size: 13.5px;
     font-weight: 600;
 }
+.logo a:hover,
 .nav a:hover{
     color: #727272;
-    border-bottom: 1px solid #d0d0d0;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -182,7 +197,7 @@ header{
 /* ----------------header end---------------- */
 main{
     width: 100%;
-    margin: 50px auto;
+    margin: 100px auto 50px auto;
     text-align: center;
 }
 main article{
@@ -191,7 +206,11 @@ main article{
     margin-bottom: 30px;
 }
 main article h1{
-    font-weight: 600;
+    font-weight: 500;
+}
+main article p{
+    font-size: 14px;
+    color: #3a3a3a;
 }
 main article a{
     color: #0055b0;
@@ -201,12 +220,29 @@ main article a{
     width: 100%;
     max-width: 750px;
 }
-
-
+.back_btn{
+    display: block;
+    padding: 14px;
+    width: 60px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    border-radius:5px;
+    background-color: #F9F9F9;
+    color: #666666;
+    margin: 30px auto auto auto;
+}
+.back_btn:hover{
+    background-color: #666666;
+    border: 1px solid #666666;
+    color: #F9F9F9;
+    transition: 0.5s;
+}
 
 @media screen and (max-width: 768px) {
     main{
         margin-top: 95px;
+        margin-bottom: 10px;
         width: 85%;
     }
 }
@@ -220,15 +256,16 @@ main article a{
 footer{
     position: fixed;
     bottom: 15px;
-    right: 25px;
+    left: 25px;
     font-size: 12px;
-    font-weight: 600;
 }
 @media screen and (max-width: 768px) {
     footer{
         position: static;
-        line-height: 30px;
-        background-color: rgb(238, 238, 238);
+        line-height: 50px;
+        /* background-color: rgb(238, 238, 238); */
         text-align: center;
+        font-weight: 500;
+        color: #3a3a3a;
     }
 }

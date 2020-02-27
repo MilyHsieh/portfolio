@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>課本封面設計 | MILY HSIEH</title>
-    <link rel="stylesheet" href="../css/products.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet"></head>
 </head>
 
 <body>
@@ -27,13 +26,14 @@
     </header>
 
     <main>
-        <article><h1>南一書局 國中歷史課本</h1>封面設計</article>
+        <article><h1>南一書局 國中歷史課本</h1><p>封面設計</p></article>
         
         <ul class="pic">
             <li><img src="../images/book/history_textbook-01.png" alt=""></li>
             <li><img src="../images/book/history_textbook-02.png" alt=""></li>
             <li><img src="../images/book/history_textbook-03.png" alt=""></li>
         </ul>
+        <a href="../index.html" class="back_btn">回上頁</a>
     </main>
 
     <footer>© 2020 Hsieh Shih Ting</footer>
@@ -42,7 +42,31 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script>
         "use strict"
+        
+        //卷軸上滑出現header區
+        $(document).ready(function () {
+            $.extend({
+                'goAnchor': function (to, time) {
+                    $obj = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                    $($obj).animate({
+                        scrollTop: to
+                    }, time);
+                }
+            });
+        });
+        let bodyClass = document.body.classList,
+            lastScrollY = 0;
+        window.addEventListener('scroll', function () {
+            let st = this.scrollY;
+            if (st < lastScrollY) {
+                bodyClass.remove('hideClose');
+            } else {
+                bodyClass.add('hideClose');
+            }
+            lastScrollY = st;
+        });
 
+        //漢堡選單
         $(".burger-menu").click(function () {
             $(this).toggleClass("menu-on");
             $('header>ul').slideToggle();
