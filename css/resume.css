@@ -57,12 +57,12 @@ header{
     background-color: #ffffff;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: -65px;
     transition: top 0.4s ease-in-out;
     z-index: 500;
 }
-.hideClose header {
-    top: -65px;
+header.on{
+    top: 0;
 }
 .logo{
     margin-left: 100px;
