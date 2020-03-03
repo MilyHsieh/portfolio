@@ -202,7 +202,7 @@ header.on{
 #resume{
     width: 100%;
     max-width: 600px;
-    margin: 100px auto 150px auto;
+    margin: 150px auto 150px auto;
     letter-spacing: 0.5px;
 }
 #resume article{
@@ -239,7 +239,7 @@ header.on{
 }
 @media screen and (max-width: 768px) {
     #resume{
-        margin: 150px auto 50px auto;
+        margin: 120px auto 50px auto;
     }
     #resume article{
         display: flex;
