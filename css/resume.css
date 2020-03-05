@@ -226,16 +226,19 @@ header.on{
 .text-right h3{
     color: #3A3A3A;
     margin-top: 15px;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 15px;
 }
 #resume ul{
     margin: 10px auto;
 }
-#resume li{
+main li{
     font-size: 14px;
-    color: #606060;
+    color: #3A3A3A;
     line-height: 25px;
+}
+main .info li{
+    color: #858585;;
 }
 @media screen and (max-width: 768px) {
     #resume{
