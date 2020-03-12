@@ -205,16 +205,19 @@ main article{
     line-height: 25px;
     margin-bottom: 30px;
 }
+main article a{
+    color: #131313;
+}
 main article h1{
     font-weight: 500;
+}
+main article h1 span{
+    margin-left: 5px;
+    font-size: 14px;
 }
 main article p{
     font-size: 14px;
     color: #3a3a3a;
-}
-main article a{
-    color: #0055b0;
-    font-size: 13px;
 }
 .pic img{
     width: 100%;
