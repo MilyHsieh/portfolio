@@ -207,6 +207,10 @@ main article{
 }
 main article a{
     color: #131313;
+    transition: 0.3s;
+}
+main article a:hover{
+    color: #727272;
 }
 main article h1{
     font-weight: 500;
@@ -222,6 +226,11 @@ main article p{
 .pic img{
     width: 100%;
     max-width: 750px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.pic a:hover{
+    opacity: 0.95;
 }
 .back_btn{
     display: block;
