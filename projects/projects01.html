@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微爵網站設計 | MILY HSIEH</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700,900&display=swap&subset=chinese-traditional"
+        rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">MILY HSIEH</a></div>
+
+        <div class="burger-menu">
+            <a href="javascript:void(0)">
+                <div class="menu"></div>
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="../index.html">PORTFOLIO</a></li>
+            <li><a href="../resume.html">RESUME</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <article>
+            <h1>微爵形象美學診所</h1>
+            <p>網站視覺設計</p>
+        </article>
+
+        <ul class="pic">
+            <li><img src="../images/web/wj-01.png" alt=""></li>
+        </ul>
+        <a href="../index.html" class="back_btn">回上頁</a>
+    </main>
+
+    <footer>© 2020 Hsieh Shih Ting</footer>
+
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        "use strict"
+
+        //卷軸上滑出現header區
+        $(function () {
+            var top1 = 0;
+            $("header").addClass("on");
+            $(window).scroll(function () {
+                var top2 = $(window).scrollTop();
+                if (top2 > top1) {
+                    $("header").removeClass("on")
+                } else {
+                    $("header").addClass("on")
+                }
+                top1 = top2;
+            })
+        });
+
+        //漢堡選單
+        $(".burger-menu").click(function () {
+            $(this).toggleClass("menu-on");
+            $('header>ul').slideToggle();
+        });
+
+    </script>
+
+</body>
+
+</html>
